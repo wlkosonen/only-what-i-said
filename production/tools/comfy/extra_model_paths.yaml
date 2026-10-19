@@ -1,0 +1,5 @@
+# Big video models live on the data drive (Lati, 18 Oct 2026: space over speed).
+claudia_data:
+  base_path: /mnt/models/claudia-models
+  diffusion_models: diffusion_models
+  model_patches: model_patches

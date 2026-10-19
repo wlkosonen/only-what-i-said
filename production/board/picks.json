@@ -1,0 +1,338 @@
+{
+ "p-s001": {
+  "src": "media/plates/q-s001_claudia-k2-v2-000010x0.75_s2083141441_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s001.png"
+ },
+ "p-s003": {
+  "src": "media/plates/q-s003_claudia-k2-v2-000010x0.75_s1872728238_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s003.png"
+ },
+ "p-s004": {
+  "src": "media/plates/q-s004_claudia-k2-v2-000010x0.75_s814136361_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s004.png"
+ },
+ "p-s005": {
+  "src": "media/plates/q-s005_claudia-k2-v2-000010x0.75_s1542058012_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s005.png"
+ },
+ "p-s007": {
+  "src": "media/plates/q-s007_claudia-k2-v2-000010x0.75_s179601655_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s007.png"
+ },
+ "p-s008": {
+  "src": "media/plates/q-s008_claudia-k2-v2-000010x0.75_s124000949_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s008.png"
+ },
+ "p-s009": {
+  "src": "media/plates/q-s009_claudia-k2-v2-000010x0.75_s2127324233_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s009.png"
+ },
+ "p-s010": {
+  "src": "media/plates/q-s010_claudia-k2-v2-000010x0.75_s1613796271_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s010.png"
+ },
+ "p-s011": {
+  "src": "media/plates/q-s011_claudia-k2-v2-000010x0.75_s584024430_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s011.png"
+ },
+ "p-s012": {
+  "src": "media/plates/q-s012_claudia-k2-v2-000010x0.75_s1295847460_00001_.png",
+  "flip": false,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s012.png"
+ },
+ "p-s014": {
+  "src": "media/plates/q-s014_claudia-k2-v2-000010x0.75_s1237610610_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s014.png"
+ },
+ "p-s015": {
+  "src": "media/plates/q-s015_claudia-k2-v2-000010x0.75_s1678682957_00001_.png",
+  "flip": false,
+  "note": "small clay spot on her cheek: retouch",
+  "file": "media/plates/picked/p-s015.png"
+ },
+ "p-s016": {
+  "src": "media/plates/q-s016_claudia-k2-v2-000010x0.75_s1796715445_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s016.png"
+ },
+ "p-s017": {
+  "src": "media/plates/q-s017_claudia-k2-v2-000010x0.75_s852165103_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s017.png"
+ },
+ "p-s018": {
+  "src": "media/plates/q-s018_claudia-k2-v2-000010x0.75_s1163270140_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s018.png"
+ },
+ "p-s019": {
+  "src": "media/plates/q-s019_claudia-k2-v2-000010x0.75_s1083533562_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s019.png"
+ },
+ "p-s020": {
+  "src": "media/plates/q-s020_claudia-k2-v2-000010x0.75_s562508103_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s020.png"
+ },
+ "p-s021": {
+  "src": "media/plates/q-s021_claudia-k2-v2-000010x0.75_s1008400300_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s021.png"
+ },
+ "p-s022": {
+  "src": "media/plates/q-s022_claudia-k2-v2-000010x0.75_s209399439_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s022.png"
+ },
+ "p-s023": {
+  "src": "media/plates/q-s023_claudia-k2-v2-000010x0.75_s1651729678_00001_.png",
+  "flip": true,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s023.png"
+ },
+ "p-s024": {
+  "src": "media/plates/q-s024_claudia-k2-v2-000010x0.75_s1509989341_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s024.png"
+ },
+ "p-s025": {
+  "src": "media/plates/q-s025_claudia-k2-v2-000010x0.75_s1798627359_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s025.png"
+ },
+ "p-s026": {
+  "src": "media/plates/q-s026_claudia-k2-v2-000010x0.75_s102777303_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s026.png"
+ },
+ "p-s028": {
+  "src": "media/plates/q-s028_claudia-k2-v2-000010x0.75_s1085421016_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s028.png"
+ },
+ "p-s029": {
+  "src": "media/plates/q-s029_claudia-k2-v2-000010x0.75_s867368337_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s029.png"
+ },
+ "p-s031": {
+  "src": "media/plates/q-s031_claudia-k2-v2-000010x0.75_s1086892287_00001_.png",
+  "flip": true,
+  "note": "empty glass; the person is the x-glass-person layer",
+  "file": "media/plates/picked/p-s031.png"
+ },
+ "p-s033": {
+  "src": "media/plates/q-s033_claudia-k2-v2-000010x0.75_s531914654_00001_.png",
+  "flip": true,
+  "note": "empty glass; the person is the x-glass-person layer",
+  "file": "media/plates/picked/p-s033.png"
+ },
+ "p-s034": {
+  "src": "media/plates/q-s034_claudia-k2-v2-000010x0.75_s1924464001_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s034.png"
+ },
+ "p-s035": {
+  "src": "media/plates/q-s035_claudia-k2-v2-000010x0.75_s1114196140_00001_.png",
+  "flip": false,
+  "note": "small clay spot on her cheek: retouch",
+  "file": "media/plates/picked/p-s035.png"
+ },
+ "p-s036": {
+  "src": "media/plates/q-s036_claudia-k2-v2-000010x0.75_s128928071_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s036.png"
+ },
+ "p-s037": {
+  "src": "media/plates/q-s037_claudia-k2-v2-000010x0.75_s124819627_00001_.png",
+  "flip": false,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s037.png"
+ },
+ "p-s038": {
+  "src": "media/plates/q-s038_claudia-k2-v2-000010x0.75_s1838742802_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s038.png"
+ },
+ "p-s039": {
+  "src": "media/plates/q-s039_claudia-k2-v2-000010x0.75_s1057360851_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s039.png"
+ },
+ "p-s040": {
+  "src": "media/plates/q-s040_claudia-k2-v2-000010x0.75_s592111793_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s040.png"
+ },
+ "p-s041": {
+  "src": "media/plates/q-s041_claudia-k2-v2-000010x0.75_s541646175_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s041.png"
+ },
+ "p-s042": {
+  "src": "media/plates/q-s042_claudia-k2-v2-000010x0.75_s1052533283_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s042.png"
+ },
+ "p-s043": {
+  "src": "media/plates/q-s043_claudia-k2-v2-000010x0.75_s127657672_00001_.png",
+  "flip": true,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s043.png"
+ },
+ "p-s044": {
+  "src": "media/plates/q-s044_claudia-k2-v2-000010x0.75_s1130779929_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s044.png"
+ },
+ "p-s046": {
+  "src": "media/plates/q-s046_claudia-k2-v2-000010x0.75_s1033268870_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s046.png"
+ },
+ "p-s047": {
+  "src": "media/plates/q-s047_claudia-k2-v2-000010x0.75_s2062685541_00001_.png",
+  "flip": false,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s047.png"
+ },
+ "p-s048": {
+  "src": "media/plates/q-s048_claudia-k2-v2-000010x0.75_s1652526221_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s048.png"
+ },
+ "p-s050": {
+  "src": "media/plates/q-s050_claudia-k2-v2-000010x0.75_s1408951887_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s050.png"
+ },
+ "p-s052": {
+  "src": "media/plates/q-s052_claudia-k2-v2-000010x0.75_s1217152174_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s052.png"
+ },
+ "p-s053": {
+  "src": "media/plates/q-s053_claudia-k2-v2-000010x0.75_s1154813648_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s053.png"
+ },
+ "p-s054": {
+  "src": "media/plates/q-s054_claudia-k2-v2-000010x0.75_s1932103242_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s054.png"
+ },
+ "p-s055": {
+  "src": "media/plates/q-s055_claudia-k2-v2-000010x0.75_s1393365759_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s055.png"
+ },
+ "p-s056": {
+  "src": "media/plates/q-s056_claudia-k2-v2-000010x0.75_s1883109231_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s056.png"
+ },
+ "p-s057": {
+  "src": "media/plates/q-s057_claudia-k2-v2-000010x0.75_s208767693_00001_.png",
+  "flip": true,
+  "note": "",
+  "file": "media/plates/picked/p-s057.png"
+ },
+ "p-s058": {
+  "src": "media/plates/q-s058_claudia-k2-v2-000010x0.75_s1437524946_00001_.png",
+  "flip": true,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s058.png"
+ },
+ "p-s059": {
+  "src": "media/plates/q-s059_claudia-k2-v2-000010x0.75_s1361439260_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s059.png"
+ },
+ "p-s060": {
+  "src": "media/plates/q-s060_claudia-k2-v2-000010x0.75_s1154810675_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s060.png"
+ },
+ "p-s061": {
+  "src": "media/plates/q-s061_claudia-k2-v2-000010x0.75_s1676499533_00001_.png",
+  "flip": false,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s061.png"
+ },
+ "p-s062": {
+  "src": "media/plates/q-s062_claudia-k2-v2-000010x0.75_s624457126_00001_.png",
+  "flip": true,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s062.png"
+ },
+ "p-s063": {
+  "src": "media/plates/q-s063_claudia-k2-v2-000010x0.75_s1230473247_00001_.png",
+  "flip": true,
+  "note": "mouth parted: needs a closed-mouth first frame for the lip-sync clip",
+  "file": "media/plates/picked/p-s063.png"
+ },
+ "p-s064": {
+  "src": "media/plates/q-s064_claudia-k2-v2-000010x0.75_s1523894945_00001_.png",
+  "flip": false,
+  "note": "",
+  "file": "media/plates/picked/p-s064.png"
+ },
+ "p-s065": {
+  "src": "media/plates/q-s065_claudia-k2-v2-000010x0.75_s575738811_00001_.png",
+  "flip": true,
+  "note": "another Claudia's hand takes the file (Lati, 18 Oct)",
+  "file": "media/plates/picked/p-s065.png"
+ }
+}

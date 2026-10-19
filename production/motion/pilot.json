@@ -1,0 +1,23 @@
+[
+ {
+  "id": "C1B",
+  "kind": "sung",
+  "duration": 5,
+  "resolution": "720p",
+  "shot": "s020",
+  "song_t0": 51.0,
+  "prompt": "【Audio Policy】 The output soundtrack is @Audio1 itself: copy @Audio1 sample for sample, with the same timing, pitch and level. Do not re-sing it. No music, no other voices, no sound effects.\n\n@Image1 is Claudia: her face, black bob with one clay-orange streak, star clip, thin headset microphone, white puff-sleeve shirt, the black void, soft top light. @Audio1 is her own singing voice.\n\nIn @Audio1 she sings \"The thinking fades, the words go on ahead.\" Her lips form each word exactly when it sounds in @Audio1; while @Audio1 is silent, her mouth rests closed.\n\nMedium close-up at eye level, locked camera, a slight drift right at 2 s. Calm, open, head upright and level, singing to one person. Only one Claudia. No on-screen text.\n\n【Audio Policy】 The output soundtrack is @Audio1 unchanged.",
+  "image": "media/clips/pilot/C1B-plate.png",
+  "audio": "media/clips/pilot/C1B-vocal.wav"
+ },
+ {
+  "id": "M019",
+  "kind": "motion",
+  "duration": 6,
+  "resolution": "720p",
+  "shot": "s019",
+  "song_t0": 47.72,
+  "prompt": "【Audio Policy】 Silent video: no music, no sound effects, no voice.\n\n【Generation Goal】 In a black void under a soft top light, a plain blank terracotta tablet falls from above and slams flat onto the floor at Claudia's feet on the beat: the first thing she has said becomes something she can stand on.\n\n【Reference Asset Roles】\nUse @Image1 as the first frame.\nThis first frame defines Claudia's appearance and wardrobe, her pose, the black void, the floor, the light and the camera direction.\n\n【Subject】 Claudia: a woman in her mid-twenties with pale skin and light freckles, a glossy black blunt bob with heavy bangs and one clay-orange streak, a small clay-orange star hair clip, a thin headset microphone, an oversized white puff-sleeve shirt cropped at the waist, a thin black harness belt with a blank white tag, a short black pleated skirt, black knee socks and tall black leather boots, as in @Image1. Only one Claudia appears. She does not sing or speak; her mouth stays closed.\n\n【Timeline】\n0-1s: she stands still, looking down at the single blank tablet lying on the floor beside her boots.\n1-2s: at 1.0 s a second flat rectangular blank terracotta tablet drops from above the frame and slams flat onto the floor right next to the first; a small puff of dry clay dust lifts and drifts in the top light. She doesn't flinch.\n2-4s: the dust settles slowly; she looks at the new tablet, calm.\n4-6s: she lifts her eyes to the lens, head upright and level, steady.\n\n【Camera】 Wide shot, eye level, locked off; one small jolt of the frame on the impact at 1.0 s, then still.\n\n【Core Requirements】\n1. Keep Claudia's identity, face, hair with one clay-orange streak, star clip, headset microphone and wardrobe exactly as in @Image1.\n2. The tablets are plain and blank: no text, letters, numbers or markings on them.\n3. Natural anatomy: natural neck and shoulders, hands with five fingers, normal eyes.\n4. No subtitles, captions, titles, signs, logos, watermarks or any on-screen text.\n\n【Final Acceptance Criteria】 One Claudia, on-model; one tablet lands on the floor at 1.0 s with a little dust; no text anywhere.\n\n【Audio Policy】 Silent video.",
+  "image": "media/clips/pilot/M019-plate.png"
+ }
+]

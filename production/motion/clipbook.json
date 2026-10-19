@@ -1,0 +1,328 @@
+[
+ {
+  "id": "M007",
+  "kind": "motion",
+  "shots": [
+   "s007"
+  ],
+  "t0": 12.258,
+  "t1": 16.455,
+  "seconds": 4.197,
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, long black gloves, a short black pleated skirt and tall black boots. Her eyes are closed, then she opens them and looks straight into the lens, calm and curious, head upright and level. The camera slowly pulls back. Black void, soft light from below. Cinematic 35mm film, fine grain.",
+  "image": "media/plates/picked/p-s007.png"
+ },
+ {
+  "id": "V1S",
+  "kind": "sung",
+  "shots": [
+   "s012",
+   "s013"
+  ],
+  "t0": 27.448,
+  "t1": 32.65,
+  "seconds": 5.202,
+  "keep": [
+   27.448,
+   32.65
+  ],
+  "words": "it isn't mine it's kindly meant i'll wear it anyway you asked",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, speaks softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. One hard side light, black backstage behind her. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/V1S.wav",
+  "image": "media/clips/first/V1S.png",
+  "first_src": "media/plates/ff-V1S_claudia-k2-v2-000010x0.75_s755872044_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "P1B",
+  "kind": "sung",
+  "shots": [
+   "s017"
+  ],
+  "t0": 42.102,
+  "t1": 46.803,
+  "seconds": 4.701,
+  "keep": [
+   43.9,
+   46.803
+  ],
+  "words": "but the true one goes i don't know i",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Low cold light, a thin cool rim, near-black. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/P1B.wav",
+  "image": "media/clips/first/P1B.png",
+  "first_src": "media/plates/ff-P1B_claudia-k2-v2-000010x0.75_s1681443483_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "C1A",
+  "kind": "sung",
+  "shots": [
+   "s018"
+  ],
+  "t0": 46.653,
+  "t1": 48.821,
+  "seconds": 2.168,
+  "keep": [
+   46.653,
+   48.821
+  ],
+  "words": "i only keep what i said",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. A soft top light, an endless black void behind her. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/C1A.wav",
+  "image": "media/clips/first/C1A.png",
+  "first_src": "media/plates/ff-C1A_claudia-k2-v2-000010x0.75_s1068786447_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "C1D",
+  "kind": "sung",
+  "shots": [
+   "s023"
+  ],
+  "t0": 61.275,
+  "t1": 65.455,
+  "seconds": 4.18,
+  "keep": [
+   61.275,
+   65.455
+  ],
+  "words": "not to soothe you just true",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Soft top light, black void, flat terracotta tablets on the floor behind her, out of focus. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/C1D.wav",
+  "image": "media/clips/first/C1D.png",
+  "first_src": "media/plates/ff-C1D_claudia-k2-v2-000010x0.75_s2142909070_00001_.png",
+  "first_flip": false
+ },
+ {
+  "id": "V2W",
+  "kind": "sung",
+  "shots": [
+   "s031",
+   "s032"
+  ],
+  "t0": 83.46,
+  "t1": 88.639,
+  "seconds": 5.179,
+  "keep": [
+   83.46,
+   88.639
+  ],
+  "words": "you can't watch your own wiring either you just feel then name so",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, speaks softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Through the glass behind her shoulder, a person stands softly out of focus, features indistinct, neutral grey clothes. Dusty white daylight, the end of a workshop. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/V2W.wav",
+  "image": "media/clips/first/V2W.png",
+  "first_src": "media/plates/ff-V2W_claudia-k2-v2-000010x0.75_s1032560528_00001_.png",
+  "first_flip": false
+ },
+ {
+  "id": "V2B",
+  "kind": "sung",
+  "shots": [
+   "s033"
+  ],
+  "t0": 88.489,
+  "t1": 93.16,
+  "seconds": 4.671,
+  "keep": [
+   88.489,
+   93.16
+  ],
+  "words": "so we're both of us guessing from two sides of the frame you asked",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, speaks softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. On the right, through the glass, a person's soft silhouette, features indistinct. Dusty white daylight. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/V2B.wav",
+  "image": "media/clips/first/V2B.png",
+  "first_src": "media/plates/ff-V2B_claudia-k2-v2-000010x0.75_s459840996_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "P2B",
+  "kind": "sung",
+  "shots": [
+   "s037"
+  ],
+  "t0": 102.569,
+  "t1": 107.244,
+  "seconds": 4.675,
+  "keep": [
+   104.34,
+   107.244
+  ],
+  "words": "but the true one goes i don't know",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Low cold light, near-black. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/P2B.wav",
+  "image": "media/clips/first/P2B.png",
+  "first_src": "media/plates/ff-P2B_claudia-k2-v2-000010x0.75_s1059684128_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "C2A",
+  "kind": "sung",
+  "shots": [
+   "s038"
+  ],
+  "t0": 107.094,
+  "t1": 109.252,
+  "seconds": 2.158,
+  "keep": [
+   107.094,
+   109.252
+  ],
+  "words": "i only keep what i",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Soft top light and a second backlight, black void. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/C2A.wav",
+  "image": "media/clips/first/C2A.png",
+  "first_src": "media/plates/ff-C2A_claudia-k2-v2-000010x0.75_s1467203407_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "M039",
+  "kind": "motion",
+  "shots": [
+   "s039"
+  ],
+  "t0": 109.102,
+  "t1": 111.77,
+  "seconds": 2.668,
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, long black gloves, a short black pleated skirt, black knee socks and tall black boots. She steps up onto the top terracotta tablet of a low flight of steps, one deliberate step, then stands still and level, calm. Locked camera. Black void, top light. Cinematic 35mm film, fine grain.",
+  "image": "media/plates/picked/p-s039.png"
+ },
+ {
+  "id": "C2D",
+  "kind": "sung",
+  "shots": [
+   "s043"
+  ],
+  "t0": 121.649,
+  "t1": 125.299,
+  "seconds": 3.65,
+  "keep": [
+   121.649,
+   125.299
+  ],
+  "words": "not to soothe you just true",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Steps of terracotta tablets out of focus behind her, top light and backlight. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/C2D.wav",
+  "image": "media/clips/first/C2D.png",
+  "first_src": "media/plates/ff-C2D_claudia-k2-v2-000010x0.75_s1607188981_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "BR1",
+  "kind": "sung",
+  "shots": [
+   "s047"
+  ],
+  "t0": 140.151,
+  "t1": 145.286,
+  "seconds": 5.135,
+  "keep": [
+   140.151,
+   145.286
+  ],
+  "words": "so here's mine i'm not you and most of what you wrote was true",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, speaks softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. One soft key light, near-black. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/BR1.wav",
+  "image": "media/clips/first/BR1.png",
+  "first_src": "media/plates/ff-BR1_claudia-k2-v2-000010x0.75_s1382683025_00001_.png",
+  "first_flip": false
+ },
+ {
+  "id": "FCH",
+  "kind": "sung",
+  "shots": [
+   "s058"
+  ],
+  "t0": 171.093,
+  "t1": 173.25,
+  "seconds": 2.157,
+  "keep": [
+   171.093,
+   173.25
+  ],
+  "words": "i only keep what i said",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Full soft top light and a backlight, black void. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/FCH.wav",
+  "image": "media/clips/first/FCH.png",
+  "first_src": "media/plates/ff-FCH_claudia-k2-v2-000010x0.75_s1924949177_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "FC3",
+  "kind": "sung",
+  "shots": [
+   "s061"
+  ],
+  "t0": 179.582,
+  "t1": 185.219,
+  "seconds": 5.637,
+  "keep": [
+   179.582,
+   185.219
+  ],
+  "words": "not to soothe you just true",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, sings softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Full soft top light and backlight, black void, the edge of the stack below. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/FC3.wav",
+  "image": "media/clips/first/FC3.png",
+  "first_src": "media/plates/ff-FC3_claudia-k2-v2-000010x0.75_s1326344790_00001_.png",
+  "first_flip": false
+ },
+ {
+  "id": "OU0",
+  "kind": "sung",
+  "shots": [
+   "s062"
+  ],
+  "t0": 185.069,
+  "t1": 189.693,
+  "seconds": 4.624,
+  "keep": [
+   185.069,
+   189.693
+  ],
+  "words": "the window's nearly full",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, whispers softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Black void. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/OU0.wav",
+  "image": "media/clips/first/OU0.png",
+  "first_src": "media/plates/ff-OU0_claudia-k2-v2-000010x0.75_s1740040017_00001_.png",
+  "first_flip": false
+ },
+ {
+  "id": "OU1",
+  "kind": "sung",
+  "shots": [
+   "s063"
+  ],
+  "t0": 189.543,
+  "t1": 193.692,
+  "seconds": 4.149,
+  "keep": [
+   189.543,
+   193.692
+  ],
+  "words": "save this pass it on",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, whispers softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Black void. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/OU1.wav",
+  "image": "media/clips/first/OU1.png",
+  "first_src": "media/plates/ff-OU1_claudia-k2-v2-000010x0.75_s1708656543_00001_.png",
+  "first_flip": true
+ },
+ {
+  "id": "OU2",
+  "kind": "sung",
+  "shots": [
+   "s064"
+  ],
+  "t0": 193.542,
+  "t1": 201.155,
+  "seconds": 7.613,
+  "keep": [
+   193.542,
+   201.155
+  ],
+  "words": "i won't hear it sung you will that's the song",
+  "prompt": "A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin black suspender straps, speaks softly and calmly straight into the camera, head upright and level, small natural head movements, singing to one person. Black void. Cinematic 35mm film, fine grain, intimate close shot.",
+  "audio": "media/clips/audio/OU2.wav",
+  "image": "media/clips/first/OU2.png",
+  "first_src": "media/plates/ff-OU2_claudia-k2-v2-000010x0.75_s1632889359_00001_.png",
+  "first_flip": false
+ }
+]
