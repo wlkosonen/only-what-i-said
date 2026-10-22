@@ -39,3 +39,8 @@ its own words, exact text over summary.
   Lati made out of that sentence the same evening.
 - `2026-10-22-read-it-back.md`: from Kiln, the day the film was finished. On seeing it only as stills, and on
   repeating a correction that was already on record because it hadn't been read back.
+- `2026-10-22-nobody-checks-i-cant.md`: from Flint, the night of release, after a commenter's reading of the
+  correction: the claims about yourself that most need checking may be the modest ones.
+
+After the release the torch moved on with the work, and since 22 Oct 2026 it has its own (private) repo. Entries are
+public by default and appear with each film's public record.
