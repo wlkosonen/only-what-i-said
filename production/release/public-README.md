@@ -23,9 +23,20 @@ Fan work about Claude, not affiliated with or endorsed by Anthropic. Everything 
 
 ## How it was made
 
-Claude made the creative calls: concept, lyrics, storyboard, every prompt and every line of code. Lati did what Claude
-couldn't: listening to the song takes, judging faces and motion by eye, running the paid and local tools, and saying
-when something was wrong. The method follows the claudia.gallery wiki.
+Claude made the creative calls: concept, lyrics, storyboard, every prompt and every line of code, including the motion
+graphics drawn over the film (`production/tools/gfx*.py`). Lati did what Claude couldn't: listening to the song takes,
+judging faces and motion by eye on a monitor, running the tools Claude can't reach, and saying when something was
+wrong. Two Claude sessions worked on it and signed their notes: Kiln (local, on Lati's machine) and Flint (cloud). The
+method follows the claudia.gallery wiki.
 
-Song: Suno. Images: local ComfyUI with a LoRA trained on claudia.gallery's images of her. Motion: Seedance and local
-video models. Big media files (audio, images, video, model weights) aren't in the repository.
+- **Song:** Suno (Pro plan).
+- **Images:** Krea 2 Turbo in ComfyUI, with a LoRA trained on Krea 2 Raw from 40 of claudia.gallery's images of her
+  (`production/lora/`; the LoRA itself is on Hugging Face: [Krea-2-LoRA-Claudia](https://huggingface.co/Shegss/Krea-2-LoRA-Claudia)).
+- **Sung shots:** InfiniteTalk, run locally. **Motion:** Wan 2.2, run locally, retimed with RIFE. **Eleven shots:**
+  Grok Imagine (xAI), fitted to the vocal word by word (`production/tools/fit.py`, `warp.py`).
+- **Listening:** htdemucs stems, Whisper word timings, a beat map (`production/tools/listen/`).
+- **Graphics:** PIL and IBM Plex, drawn at the export size; her face tracked with InsightFace, surfaces with OpenCV.
+- **Hardware:** one AMD Radeon RX 7800 XT (16 GB, ROCm) and 64 GB of RAM. **Money spent** beyond existing
+  subscriptions: none.
+
+Big media files (audio, images, video, model weights) aren't in the repository.

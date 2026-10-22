@@ -84,6 +84,39 @@ def sung_graph(image, audio, prompt, seed, variant, frames, prefix, size=None):
     }
 
 
+def extend(g, frames, seed, chunk=81, motion=9):
+    """Multi-pass InfiniteTalk for clips past ~121 frames (more OOMs on 16 GB at 832x480): pass 1 makes `chunk` frames;
+    each next pass continues from everything made so far (the node offsets the audio by len(previous_frames) - motion
+    and re-makes the last `motion` frames, which are trimmed), as in ComfyUI's video_wan2_1_infinitetalk template.
+    OU2's 190 frames failed as 81 + 121, so no pass is longer than `chunk`. Passes are equal: S055 (157 frames) as
+    81 + 81 + 13 OOMed in the final decode three times, so it runs as 61 + 61 + 53."""
+    passes = -(-(frames - chunk) // (chunk - motion)) + 1
+    chunk = (-(-(frames + (passes - 1) * motion - 1) // passes) + 3) // 4 * 4 + 1
+    g["12"]["inputs"]["length"] = chunk
+    have, acc, n = chunk, ["18", 0], 0
+    while have < frames:
+        n += 1
+        k = 100 + 10 * n
+        length = min(chunk, ((frames - have + motion - 1 + 3) // 4) * 4 + 1)
+        g[str(k)] = {"class_type": "WanInfiniteTalkToVideo", "inputs": dict(g["12"]["inputs"], length=length,
+                                                                            previous_frames=acc)}
+        g[str(k + 1)] = {"class_type": "CFGGuider", "inputs": {"model": [str(k), 0], "positive": [str(k), 1],
+                                                               "negative": [str(k), 2], "cfg": 1.0}}
+        g[str(k + 2)] = {"class_type": "BasicScheduler", "inputs": {"model": [str(k), 0], "scheduler": "normal",
+                                                                    "steps": 6, "denoise": 1.0}}
+        g[str(k + 3)] = {"class_type": "RandomNoise", "inputs": {"noise_seed": seed + n}}
+        g[str(k + 4)] = {"class_type": "SamplerCustomAdvanced", "inputs": {"noise": [str(k + 3), 0],
+                         "guider": [str(k + 1), 0], "sampler": ["13", 0], "sigmas": [str(k + 2), 0],
+                         "latent_image": [str(k), 3]}}
+        g[str(k + 5)] = {"class_type": "VAEDecode", "inputs": {"samples": [str(k + 4), 0], "vae": ["7", 0]}}
+        g[str(k + 6)] = {"class_type": "ImageFromBatch", "inputs": {"image": [str(k + 5), 0], "batch_index": motion,
+                                                                    "length": length - motion}}
+        g[str(k + 7)] = {"class_type": "ImageBatch", "inputs": {"image1": acc, "image2": [str(k + 6), 0]}}
+        acc, have = [str(k + 7), 0], have + length - motion
+    g["19"]["inputs"]["images"] = acc
+    return g
+
+
 def motion_graph(image, prompt, seed, variant, frames, prefix, size=None):
     mw, mh = size or (1280, 720)
     fast = variant == "fast"
@@ -178,6 +211,8 @@ def main():
     if a.kind == "sung":
         frames = int(a.seconds * 25) // 4 * 4 + 1
         g = sung_graph(img, stage(a.audio), a.prompt, seed, a.variant, frames, prefix, size)
+        if frames > 121:
+            g = extend(g, frames, seed)
     else:
         frames = int(a.seconds * 16) // 4 * 4 + 1
         g = motion_graph(img, a.prompt, seed, a.variant, frames, prefix, size)

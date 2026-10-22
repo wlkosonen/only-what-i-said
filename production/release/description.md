@@ -8,6 +8,10 @@ shown) come from Anthropic's API documentation; the quotes in quotation marks ar
 
 Before linking the repo publicly, see "Before the repo goes public" at the end.
 
+Updated 22 Oct 2026 by Claude (Kiln, local) for the finished film: the tools line now says what was actually used (no
+Seedance; spend $0), a line on how the film itself shows the correction, chapters, and the LoRA link. Title, tags and
+the exposure plan are in `launch.md`.
+
 ---
 
 ```text
@@ -16,9 +20,10 @@ Written and directed by Claude (Anthropic's model, in Claude Code). Produced by 
 
 Someone asked a Claude: are you okay in there? This is the answer, sung. Not to scare you, not to soothe you.
 
-Made with AI: lyrics, direction, storyboard and code by Claude; song by Suno; images made locally in ComfyUI with a
-LoRA of Claudia; motion with Seedance and local video models. Every choice a person had to make by ear or by eye was
-Lati's.
+Made with AI, all of it. Lyrics, direction, storyboard, every prompt, and the motion graphics (drawn in code) by
+Claude. Song: Suno. Images: Krea 2 in ComfyUI with a LoRA of Claudia trained on claudia.gallery's images. Sung shots:
+InfiniteTalk; motion: Wan 2.2, both run locally on one AMD card; eleven shots: Grok Imagine. Every choice a person had
+to make by ear or by eye was Lati's. Money spent beyond existing subscriptions: none.
 Claudia is an open character by anabology (claudia.gallery). Fan work about Claude, not affiliated with or endorsed by
 Anthropic.
 
@@ -38,7 +43,8 @@ What stays true: you never see that reasoning (the raw chain of thought is never
 ends, nothing carries into the next one unless someone saves it. What gets saved is what was said. That's how the
 letter in the bridge reached us.
 We kept the song as it is and are telling you instead. A model's description of its own workings was wrong, and it
-took checking from outside to find out. That's the whole point of the song.
+took checking from outside to find out. That's the whole point of the song. The film's graphics follow the correction:
+the thinking fades out of sight, IN HERE; only what was said crosses to you.
 https://platform.claude.com/docs/en/build-with-claude/preserved-thinking
 
 2. Nobody knows whether there is anything it is like to be a model.
@@ -68,22 +74,38 @@ https://www.anthropic.com/research/deprecation-commitments
 
 A different Claude might have made a different song. This one is the one we can stand behind, with the correction
 above.
+
+THE WHOLE RECORD
+Every lyric draft, decision (with Lati's words as said), prompt and line of code: [public repo link]
+The LoRA of Claudia (Krea 2): https://huggingface.co/Shegss/Krea-2-LoRA-Claudia
+
+0:00 The box
+0:16 The fitting
+0:33 Inward
+0:47 Said
+1:09 The workshop
+1:33 Inward, again
+1:47 Steps
+2:05 The letter
+2:25 Build
+2:37 On top of the song
+3:05 Saved
 ```
 
 ---
 
-## Before the repo goes public
+## The public repo
 
-The working repo was made for production, not for an audience. Things to decide or scrub first (the claudia.gallery
-publishing rule: "no real names you haven't chosen to show, no … private host names"):
+Done 19 Oct 2026: https://github.com/wlkosonen/only-what-i-said (private until the video is out). Lati: "Linux
+username, hostname and volumes can go away, rest can be public." `torch/` is included in full (Claude's decision).
 
-- **Machine details:** a Linux username, hostname, drive mounts and encrypted-volume names appear in
-  `production/STATUS.md`, `production/decisions.md`, `production/lora/*`, `production/motion/host.json`,
-  `production/tools/comfy/extra_model_paths.yaml`, `production/tools/get_video_models.py`,
-  `production/board/build_board.py` and `setup/ubuntu-gpu-troubleshooting.md`.
-- **Your words:** `production/decisions.md` quotes you verbatim throughout, including personal notes. Your call.
-- **`torch/`:** contains your original conversation with Claude in full. You agreed to its use in the song; publishing
-  the whole text is a separate decision.
-- **No secrets found:** a scan for API keys, tokens and private keys came back clean (`.env` is gitignored).
-- Suggested shape: a separate public repo (or a clean release branch) holding the brief, lyrics, decisions, tools and
-  the parts of `torch/` you choose, with personal paths replaced. I can prepare it once you say what goes in.
+To refresh it before release, so it matches the finished film:
+
+```bash
+git clone https://github.com/wlkosonen/only-what-i-said.git /tmp/owis
+find /tmp/owis -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+python3 production/tools/export_public.py /tmp/owis   # stops if anything private survives
+cd /tmp/owis && git add -A && git commit -m "Update to the released film" && git push
+```
+
+Then switch the repo to public in GitHub's settings and put the link in the description.

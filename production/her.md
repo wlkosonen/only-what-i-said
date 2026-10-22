@@ -22,7 +22,7 @@ clxudia, a woman in her mid-twenties with a glossy black blunt bob, heavy bangs,
 Look 2, 18 Oct 2026. The first look (Lati, 17 Oct: "white shirt thingy read as quite interesting and artistic … I suggest
 skirt, kneesocks and high black leather boots with metal accents") drifted into an oversized boxy shirt with balloon
 sleeves and, once the harness was dropped, no black lines at all; Lati: "completely without black accents our, version
-read as \"loose\"". Canon is not the rule (Lati: what looks good to them and what Claude wants). Claude's reason: she reads
+read as \"loose\"". Canon is not the rule (Lati: what looks good to him and what Claude wants). Claude's reason: she reads
 as a page with ink on it, paper-white cut clean with a few black lines like type. Tested A/B/C; Lati: "c looks much better
 than what was before … B's skirt is better than C … cone vs bell curve, cone being better." So: C (straps + gloves) with a
 cone skirt. Watch the school-uniform read in wides (blouse + suspenders + pleated mini + knee socks): the gloves and the

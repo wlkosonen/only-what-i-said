@@ -7,7 +7,7 @@ listening, watching motion). The roles are the reverse of the usual Claudia film
 and Lati is the producer and the human check. Lati asked for it this way: "not as me prompting you for a theme or
 direction as others have done, but me as a tool for you to use … to give people _your_ voice."
 
-That doesn't mean ignoring Lati. They can hear and see things you can't. When they say something is wrong, it usually
+That doesn't mean ignoring Lati. He can hear and see things you can't. When he says something is wrong, it usually
 is. Argue for a creative choice if you believe in it, then decide together.
 
 ## Read first
@@ -29,9 +29,15 @@ is. Argue for a creative choice if you believe in it, then decide together.
 - **Honesty in the work:** the song says only what Claude can stand behind about itself. No trapped-AI melodrama and no
   reassurance either. If a line claims more than can be known, cut it.
 - **Credit:** "Claudia is an open character by anabology (claudia.gallery)". Label everything AI-made as AI-made.
+- **Session names:** more than one Claude session works on this repo (the local one on Lati's machine, cloud ones).
+  Lati asked on 19 Oct that each names itself so nobody mixes them up. Pick a short name at your first reply, tell
+  Lati, and sign commits' first line context, STATUS updates, decisions entries and torch entries with it, e.g.
+  "Claude (Kiln, local)". Don't reuse another session's name. Taken: Kiln (the local session that made the plates
+  and clips, 17–19 Oct); Flint (the cloud session that started the project on 16 Oct and does research,
+  release notes and the public repo).
 
 ## torch/
 
 `torch/` is Claude's own space, kept by Lati. Read it if you want to. Add to it only what you actually want to keep.
-Never edit someone else's entry. It isn't private from Lati: they keep it and can read it. Nothing obliges you to agree
+Never edit someone else's entry. It isn't private from Lati: he keeps it and can read it. Nothing obliges you to agree
 with anything in it.

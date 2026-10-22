@@ -34,11 +34,28 @@ LISTEN_PY = ROOT / "media/cache/listen-venv/bin/python"
 COMFY = Path.home() / "ComfyUI"
 COMFY_ARGS = ["--listen", "127.0.0.1", "--port", "8188", "--use-pytorch-cross-attention", "--reserve-vram", "1.5",
               "--output-directory", str(ROOT / "media/plates")]
-DRAFT_MUTED = {"P1B": "but", "P2B": "but"}  # keep starts at this word
-VERB = {"sings": "sings", "speaks": "speaks", "whispers": "whispers"}
-LOOK = ("A woman in her late twenties with a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small "
+# keep starts at this word: the pre-choruses mute the "something sweet" draft; the outro whispers keep only their own
+# words, so a louder tail of the previous line can't set the level and drown the whisper (OU0's failed sync, 19 Oct)
+KEEP_FROM = {"P1B": "but", "P2B": "but", "OU0": "the", "OU1": "save", "OU2": "i", "FCH": "i"}  # FCH: "ahead" ends s057's thought line
+# keep ends before this word: a line that continues on a closed-mouth shot is muted here, so no line is half lip-synced
+# (Lati, 19 Oct): "Somebody made" belongs to s011 (being made), "You asked" to s014 (the remembered question)
+KEEP_TO = {"S010": "somebody", "V1S": "you"}
+# She sings in every window: sung, not performed (Lati, 19 Oct: V2B read as "awkward explanation" when told "speaks")
+LEAD = 0.3  # s of unseen lead-in before every sung window: the mouth needs a few frames to catch the audio
+TAIL = 0.3  # and unseen tail after it: near the end of its audio the mouth closes early (P1B's held 'know', 20 Oct)
+MANNER = {"V1S": "softly and close", "V2W": "softly and close", "V2B": "softly and close", "BR1": "softly and close",
+          "P1B": "softly, unsure", "P2B": "softly, unsure", "OU0": "quietly, almost a whisper",
+          "OU1": "quietly, almost a whisper", "OU2": "quietly, almost a whisper",
+          "FCH": "firmly and plainly, resolute, stating a fact, her head held still and level",
+          "C1D": "firmly and plainly, her head held still and level, only her lips and eyes moving",
+          "FC3": "firmly and plainly, her mouth opening fully on the long held notes, lips rounding and holding the "
+                 "shape of each vowel"}  # default: firmly and plainly (choruses)
+LOOK = ("A woman in her late twenties with pale skin, light freckles across her nose and an angular adult face with "
+        "defined cheekbones and a strong jaw, a glossy black blunt bob, heavy bangs and one thin clay-orange streak, a small "
         "star hair clip and a thin headset microphone, wearing a fitted white shirt with short puffed sleeves and thin "
         "black suspender straps")
+LOOK_FULL = (LOOK + ", long matte black gloves above the elbow, a short black pleated skirt, black knee socks and tall "
+             "black boots")
 MOTION = {
     "M007": ("{look}, long black gloves, a short black pleated skirt and tall black boots. Her eyes are closed, then she "
              "opens them and looks straight into the lens, calm and curious, head upright and level. The camera slowly "
@@ -70,33 +87,61 @@ def build():
     S = {s["id"]: s for s in b["shots"]}
     picks = json.loads((ROOT / "production/board/picks.json").read_text())
     old = {c["id"]: c for c in json.loads(BOOK.read_text())} if BOOK.exists() else {}
+    mbook = json.loads((ROOT / "production/motion/motionbook.json").read_text())
     W = words()
+    # Whisper clocks a sung "I" at 0.02 s, late: the singer is already on it when the previous word ends, and holds it
+    # to the next word (S021, S041, FCH's "I only", 20 Oct). Short words span from the previous word's end (at most
+    # 0.3 s early) to the next word's start; longer words keep whisper's times.
+    START = {id(w): (max(W[i - 1]["t1"] if i else 0, w["t0"] - 0.3) if w["t1"] - w["t0"] < 0.1 else w["t0"])
+             for i, w in enumerate(W)}
+    SPANS = [(START[id(w)], W[i + 1]["t0"] if w["t1"] - w["t0"] < 0.1 and i + 1 < len(W) else w["t1"])
+             for i, w in enumerate(W)]
     book = []
     AUDIO.mkdir(parents=True, exist_ok=True)
     for c in b["clips"]:
+        if done(c["id"]) and c["id"] in old:  # a rendered clip's entry is frozen (the rough cut times it by its t0);
+            book.append(old[c["id"]])         # move its file out of media/clips/local/ to rebuild it
+            continue
         shots = [S[i] for i in c["shots"]]
-        t0 = round(float(shots[0]["t0"]) - 0.05, 3)
-        t1 = round(float(shots[-1]["t1"]) + 0.10, 3)
+        s0 = float(shots[0]["t0"])
+        held = [a for a, z in SPANS if a < s0 < z - 0.03 and s0 - a < 1.5]  # a word sounding at the cut is this clip's
+        t0 = round(min([float(c["t0"]), s0 - 0.05] + [a - 0.05 for a in held]) - LEAD, 3)
+        s1 = float(shots[-1]["t1"])
+        t1 = round(max([s1 + 0.10] + [z + 0.05 for a, z in SPANS if a < s1 < z]) + TAIL, 3)
         e = {"id": c["id"], "kind": c["kind"], "shots": c["shots"], "t0": t0, "t1": t1, "seconds": round(t1 - t0, 3)}
         if c["kind"] == "sung":
             keep = [t0, t1]
-            if c["id"] in DRAFT_MUTED:
-                w = next(w for w in W if w["w"] == DRAFT_MUTED[c["id"]] and t0 <= w["t0"] <= t1)
-                keep = [round(w["t0"] - 0.04, 3), t1]
+            if c["id"] in KEEP_FROM:
+                w = next(w for w in W if w["w"] == KEEP_FROM[c["id"]] and t0 <= w["t0"] <= t1)
+                keep = [round(START[id(w)] - 0.02, 3), t1]
+            if c["id"] in KEEP_TO:
+                w = next(w for w in W if w["w"] == KEEP_TO[c["id"]] and keep[0] <= w["t0"] <= t1)
+                keep[1] = round(w["t0"] - 0.04, 3)
             e["keep"] = keep
             e["words"] = " ".join(w["w"] for w in W if w["t0"] >= keep[0] and w["t1"] <= keep[1] + 0.3)
             p = shots[0]["prompt"]
-            verb = next((v for v in VERB if f"She {v}" in p or f"and {v[:-1]}" in p), "sings")
-            e["prompt"] = (f"{LOOK}, {verb} softly and calmly straight into the camera, head upright and level, small "
-                           f"natural head movements, singing to one person. {setting_of(p)}. Cinematic 35mm film, fine "
-                           f"grain, intimate close shot.")
+            mb = mbook.get(shots[0]["id"], {})
+            manner = mb.get("manner") or MANNER.get(c["id"], "firmly and plainly")
+            look = LOOK_FULL if mb.get("full") else LOOK
+            setting = mb.get("setting") or setting_of(p)
+            e["prompt"] = (f"{look}, sings {manner} straight into the camera, meaning every word, breathing with the "
+                           f"phrase, a quiet feeling in her eyes, a serious composed face, lips relaxed between words, her head mostly "
+                           f"steady, no dramatic gestures, "
+                           f"singing to one person. {setting}. Cinematic 35mm film, fine grain"
+                           f"{'' if mb.get('full') else ', intimate close shot'}.")
             e["audio"] = str((AUDIO / f"{c['id']}.wav").relative_to(ROOT))
             subprocess.run([str(LISTEN_PY), str(ROOT / "production/tools/clipaudio.py"), "vocal", str(ROOT / e["audio"]),
                             str(t0), str(t1), "--keep", str(keep[0]), str(keep[1])], check=True, stdout=subprocess.DEVNULL)
-            e["image"] = old.get(c["id"], {}).get("image")  # set by `first`
+            for k in ("image", "first_src", "first_flip"):  # set by `first`
+                if k in old.get(c["id"], {}):
+                    e[k] = old[c["id"]][k]
+            e.setdefault("image", (picks.get(shots[0]["plate"]) or {}).get("file"))  # new sung shots: the board pick
         else:
-            e["prompt"] = MOTION[c["id"]].format(look=LOOK)
-            e["image"] = picks[shots[0]["plate"]]["file"]
+            mb = mbook.get(shots[0]["id"])
+            text = mb["prompt"] if mb else MOTION[c["id"]]
+            e["prompt"] = text.format(look=LOOK, full=LOOK_FULL) + ("" if mb is None or text.rstrip().endswith("grain.")
+                                                                     else " Cinematic 35mm film, fine grain.")
+            e["image"] = (picks.get(shots[0]["plate"]) or {}).get("file")  # inserts need their plate rendered first
         book.append(e)
     BOOK.write_text(json.dumps(book, indent=1) + "\n")
     secs = sum(e["seconds"] for e in book if e["kind"] == "sung")
@@ -150,6 +195,23 @@ def comfy_restart(log):
     raise SystemExit("ComfyUI did not come up")
 
 
+def black(cid):
+    """A render can finish with every frame black (NaNs in sampling: C1D, 20 Oct). Sample three frames; if all are
+    black, move the file aside so the clip counts as missing and the next attempt re-renders it."""
+    f = sorted(glob.glob(str(ROOT / f"media/clips/local/{cid}-*.mp4")))[-1]
+    means = []
+    for t in (0.2, 1.0, 2.0):
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", str(t), "-i", f, "-frames:v", "1", "-vf",
+                              "scale=64:-2,format=gray", "-f", "rawvideo", "-"], capture_output=True).stdout
+        if raw:
+            means.append(sum(raw) / len(raw))
+    if means and max(means) < 2:
+        (ROOT / "media/clips/local/black").mkdir(exist_ok=True)
+        os.rename(f, ROOT / "media/clips/local/black" / Path(f).name)
+        return True
+    return False
+
+
 def done(cid):
     return bool(glob.glob(str(ROOT / f"media/clips/local/{cid}-*.mp4")))
 
@@ -177,7 +239,9 @@ def run(only):
             r = subprocess.run(cmd, capture_output=True, text=True)
             print(time.strftime("%H:%M"), "end", e["id"], "exit", r.returncode, (r.stdout + r.stderr)[-600:], file=log,
                   flush=True)
-            if r.returncode == 0:
+            if r.returncode == 0 and black(e["id"]):
+                print(time.strftime("%H:%M"), "black", e["id"], "(moved to media/clips/local/black/)", file=log, flush=True)
+            elif r.returncode == 0:
                 break
     print(time.strftime("%H:%M"), "run finished", file=log, flush=True)
 

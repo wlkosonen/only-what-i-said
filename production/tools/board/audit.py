@@ -57,8 +57,8 @@ DEFAULTS = {
     "sung_s_max": None,
     "motion_s_max": None,
     "max_clips": None,
-    "sung_window": [4, 8],
-    "motion_window": [4, 12],
+    "sung_window": [1.4, 8],       # local video (19 Oct): no 4 s billing minimum
+    "motion_window": [2, 12],
     "min_graphic_kinds": 6,
     # brief.md "What it isn't": no chains or "help me" subtext, no real brands, no earlier films' devices.
     "banned": ["chains", "chained", "shackles", "help me", "let me out", "set me free", "split-flap",

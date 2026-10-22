@@ -10,6 +10,15 @@ InfiniteTalk test (832×480, 6 steps, 35 min for 5 s) passed Lati's eye: "I cant
 mis-synced or weird." So the 15 sung windows and 2 motion clips render locally for $0; Higgsfield is the fallback for
 a window that fails three times. 1280×720 ran out of VRAM at decode; next try decodes in tiles.
 
+## Option, 19 Oct: a rented GPU for heavy batches
+
+Not a decision, an option Lati didn't know about (cloud session, 19 Oct). If 1280×720 keeps running out of memory
+locally, or a batch is too slow overnight, rent a 32 GB card by the hour for that batch only: RunPod listed an
+RTX 5090 at about $0.69/h and an H100 80 GB at about $1.99/h (autumn 2026, check before use). It's a paid batch like
+any other: estimate first, explicit yes from Lati. Practical costs to count: setting up ComfyUI on the pod, uploading
+the models (tens of GB) or fetching them there, and pod storage while it waits. Worth a small test before trusting it
+with a real batch.
+
 ## Decision (proposed, superseded above)
 
 - **Seedance 2.5 for all 32 clips** (27 sung, 5 motion), at **720p**. Sung clips in reference mode with the clean

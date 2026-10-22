@@ -66,9 +66,9 @@
   "file": "media/plates/picked/p-s014.png"
  },
  "p-s015": {
-  "src": "media/plates/q-s015_claudia-k2-v2-000010x0.75_s1678682957_00001_.png",
+  "src": "media/plates/q-s015_claudia-k2-v2-000010x0.75_s1143986837_00001_.png",
   "flip": false,
-  "note": "small clay spot on her cheek: retouch",
+  "note": "canon face words (Lati: drifted)",
   "file": "media/plates/picked/p-s015.png"
  },
  "p-s016": {
@@ -137,6 +137,12 @@
   "note": "",
   "file": "media/plates/picked/p-s026.png"
  },
+ "p-s027": {
+  "src": "media/plates/q-s027_s1610447940_00001_.png",
+  "flip": false,
+  "note": "auto-picked-first-seed",
+  "file": "media/plates/picked/p-s027.png"
+ },
  "p-s028": {
   "src": "media/plates/q-s028_claudia-k2-v2-000010x0.75_s1085421016_00001_.png",
   "flip": false,
@@ -148,6 +154,12 @@
   "flip": false,
   "note": "",
   "file": "media/plates/picked/p-s029.png"
+ },
+ "p-s030": {
+  "src": "media/plates/q-s030_s662143821_00001_.png",
+  "flip": false,
+  "note": "auto-picked-first-seed",
+  "file": "media/plates/picked/p-s030.png"
  },
  "p-s031": {
   "src": "media/plates/q-s031_claudia-k2-v2-000010x0.75_s1086892287_00001_.png",
@@ -168,9 +180,9 @@
   "file": "media/plates/picked/p-s034.png"
  },
  "p-s035": {
-  "src": "media/plates/q-s035_claudia-k2-v2-000010x0.75_s1114196140_00001_.png",
+  "src": "media/plates/q-s035_claudia-k2-v2-000010x0.75_s955894418_00001_.png",
   "flip": false,
-  "note": "small clay spot on her cheek: retouch",
+  "note": "canon face words (Lati: drifted)",
   "file": "media/plates/picked/p-s035.png"
  },
  "p-s036": {
@@ -245,11 +257,23 @@
   "note": "",
   "file": "media/plates/picked/p-s048.png"
  },
+ "p-s049": {
+  "src": "media/plates/q-s049_s1953185354_00001_.png",
+  "flip": false,
+  "note": "auto-picked-first-seed",
+  "file": "media/plates/picked/p-s049.png"
+ },
  "p-s050": {
   "src": "media/plates/q-s050_claudia-k2-v2-000010x0.75_s1408951887_00001_.png",
   "flip": true,
   "note": "",
   "file": "media/plates/picked/p-s050.png"
+ },
+ "p-s051": {
+  "src": "media/plates/q-s051_s128823384_00001_.png",
+  "flip": false,
+  "note": "auto-picked-first-seed",
+  "file": "media/plates/picked/p-s051.png"
  },
  "p-s052": {
   "src": "media/plates/q-s052_claudia-k2-v2-000010x0.75_s1217152174_00001_.png",
@@ -330,9 +354,9 @@
   "file": "media/plates/picked/p-s064.png"
  },
  "p-s065": {
-  "src": "media/plates/q-s065_claudia-k2-v2-000010x0.75_s575738811_00001_.png",
-  "flip": true,
-  "note": "another Claudia's hand takes the file (Lati, 18 Oct)",
+  "src": "media/plates/q-s065_claudia-k2-v2-000010x0.75_s1976869452_00001_.png",
+  "flip": false,
+  "note": "canon face words; another Claudia's hand (Lati)",
   "file": "media/plates/picked/p-s065.png"
  }
 }

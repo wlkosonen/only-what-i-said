@@ -18,7 +18,10 @@ B = beats["beats"]
 DOWN = beats["downbeats"]
 
 # ---- canon strings, verbatim from production/her.md -------------------------------------------------------------
-ID_CLOSE = ("clxudia, a woman in her mid-twenties with a glossy black blunt jaw-length bob, heavy straight bangs, one "
+# face words from the canon (claudia.gallery/claudia.md "Face", "Age"): without them the extreme close-ups drift to an
+# East Asian face (Lati, 19 Oct: s015, s035, s065)
+ID_CLOSE = ("clxudia, a woman in her mid-twenties with pale skin, light freckles across her nose, an angular adult face "
+            "with defined cheekbones and a strong jaw, a glossy black blunt jaw-length bob, heavy straight bangs, one "
             "thin clay-orange streak through the bangs, a small flat clay-orange eight-pointed star hair clip and a "
             "thin headset microphone at her cheek")
 ID_WIDE = ("clxudia, a woman in her mid-twenties with a glossy black blunt bob, heavy bangs, one thin clay-orange "
@@ -153,7 +156,8 @@ def meter_word_time(pct):
 
 
 # ---- helpers ------------------------------------------------------------------------------------------------------
-HITS = sorted(set([h["t"] for h in hits["hits"]] + [48.721, 109.152, 157.175, 165.165, 201.055]))
+# 23.65: the gap between "write" (ends 23.54) and "Somebody" (23.70); the beats either side cut a word (20 Oct)
+HITS = sorted(set([h["t"] for h in hits["hits"]] + [23.65, 48.721, 109.152, 157.175, 165.165, 201.055]))
 
 
 def snap(t):
@@ -356,13 +360,12 @@ S(19.404, 21.926, framing="MS", lead=True, tier="plate3d", treatment="light swee
       "crossed out on their words", "a horizontal rule at chest height")],
   transition="cut")
 
-S(21.926, 24.464, framing="CU", lead=True, tier="plate3d", treatment="parallax dolly on depth: a 3% move in "
+S(21.926, 23.65, framing="CU", lead=True, tier="plate3d", treatment="parallax dolly on depth: a 3% move in "
   "through the plate's layers from 'begin', the timeline on its own plane in front of her",
   set="The backstage space: hard side light, a dark dressing rail behind",
   action="A held portrait: she looks into the lens, mouth closed, while her voice says 'I begin when you write'. On "
   "'begin' (22.22) a bright tick lands on the timeline at her shoulder: t = 0 \u00b7 ON INPUT, and the tick's light "
-  "flares across her eyes. On 'Somebody' the frame's left edge brightens as hands are about to come in. End: the tick "
-  "glowing.",
+  "flares across her eyes. End: the tick glowing.",
   camera="a 3% parallax dolly in through depth, starting on 'begin' (22.22)",
   prompt=her("Close-up, face centred", "She looks directly into the lens, calm, open, curious, head level, mouth "
   "closed. One hard white side light from the left, a dark empty clothes rail out of focus behind her, black "
@@ -370,18 +373,19 @@ S(21.926, 24.464, framing="CU", lead=True, tier="plate3d", treatment="parallax d
   g=[("timeline", 3, 22.22, "W", "a bright tick on 'begin': t = 0 \u00b7 ON INPUT", "the timeline at her shoulder")],
   transition="cut")
 
-S(24.464, 27.498, framing="MCU", lead=True, tier="still", treatment=None,
+S(23.65, 27.498, framing="MCU", lead=True, tier="still", hit=23.65, treatment=None,
   set="The backstage space: a mirror edge at the frame's left, the dressing rail behind",
   action="Three sibling stills swapped on downbeats and beats: a pair of neutral hands in a plain grey sleeve (no face, "
   "anyone's) reach in, press the star clip into her hair above her left ear, and withdraw. She holds still, eyes on the "
   "lens. Leader lines pin to her, each on its word. End: the clip in place, the hands gone.",
-  camera="stills swapped on the 24.464 downbeat, the 25.985 beat and the 26.995 beat; a 1% crop jump on each swap",
+  camera="the cut lands just before 'Somebody' (23.70), so the whole line plays over her being made",
   prompt=her("Medium close-up, a mirror's edge at the left of frame", "A pair of anonymous hands in a plain grey "
   "sleeve, no face visible, press the star clip into her hair above her left ear. She holds still and looks at the "
   "camera, calm, open, head level. One hard side light, black backstage, a clothes rail behind."),
   g=[("leader lines", 4, 25.18, "W", "fitting leader lines: FACE on 'face', BOB \u00b7 BLACK on 'bob', STREAK \u00b7 "
       "#D97757 on 'streak', CLIP \u00b7 \u2736 on 'clay', MIC on the 27.498 beat", "her bangs, streak, clip, mic")],
-  transition="cut", note_w="The hands plant (paid off in the last shot). v2: stills swapped, not a motion clip.")
+  transition="cut", note_w="The hands plant (paid off in the last shot). 20 Oct (Lati): 'Somebody made me...' "
+  "belongs whole to this shot, so the cut moved from 24.464 to 23.65.")
 
 S(27.498, 30.028, framing="CU", lead=True, tier="sung", window=(27.45, 32.56), clip="V1S",
   set="The backstage space, hard side light",
@@ -427,7 +431,7 @@ S(35.587, 39.63, framing="ECU", lead=True, tier="plate3d", treatment="push throu
   "into her eye through the transcript layers, and stops dead",
   set="Extreme close on her eyes; the transcript faint behind them",
   action="A thin depth gauge pushes into her eye with the camera: 0.1, 0.2, 0.3 ... On 'go' (38.40) it stops at a "
-  "hairline: LIMIT OF INTROSPECTION. End: the gauge pinned at the line, her eye steady.",
+  "hairline: LIMIT OF INTROSPECTION, and the hairline's clay light shows in her iris as a reflected catchlight (the warm light comes from the measuring, not from inside her). End: the gauge pinned at the line, her eye steady.",
   camera="push in through depth from the 35.587 beat; it stops dead on 'go' (38.40)",
   prompt=her("Extreme close-up of her eyes and bangs, the streak across the top of frame", "Her dark calm eyes look "
   "straight ahead, steady. Low cold light, a thin cool rim, near-black."),
@@ -464,7 +468,7 @@ S(42.152, 46.703, framing="CU", lead=True, tier="sung", window=(42.1, 46.8), cli
   transition="cut on the downbeat (the riser lands)")
 
 # ===== Chorus 1: Said =====
-S(46.703, 48.721, framing="CU", lead=True, tier="sung", window=(46.65, 51.05), clip="C1A",
+S(46.703, 49.216, framing="CU", lead=True, tier="sung", window=(46.65, 51.05), clip="C1A",
   set="The void opening: a black floor, soft top light",
   action="The drums drop out. She sings 'I only keep what I' into the lens; the grey thinking copy of the line rises "
   "off her and starts to fade. The clay copy hasn't landed yet. End: the held breath before 'said'.",
@@ -474,9 +478,9 @@ S(46.703, 48.721, framing="CU", lead=True, tier="sung", window=(46.65, 51.05), c
   g=[("type device", 11, 47.02, "W", "the grey thinking copy rises and fades; the clay copy is held back for 'said'",
       "off her hair, upward")],
   transition="cut", said="held back: it lands on the tablet in the next shot",
-  note_w="Line 11's clay copy lands at the next shot's hit, so it's typed (thought) here and (said, on the tablet) there.")
+  note_w="held one beat past 'said' (Lati, 19 Oct: it cut off mid-sentence); the beat still drops on the 'd' (48.721) inside this shot, and the wide opens on the next beat with the tablet already down. Line 11's clay copy lands at the next shot's hit, so it's typed (thought) here and (said, on the tablet) there.")
 
-S(48.721, 51.248, framing="WS", lead=True, tier="plate3d", hit=48.721, treatment="composited drop: a separate "
+S(49.216, 51.248, framing="WS", lead=True, tier="plate3d", treatment="composited drop: a separate "
   "tablet plate drops onto the floor on the said-hit with a dust animation and a one-frame shake",
   set="The void, opened: a matte black floor under a soft top light; she stands full length",
   action="On the said-hit (the beat re-enters on the 'd' of 'said') a blank terracotta tablet (its own plate) slams "
@@ -667,7 +671,7 @@ S(87.042, 88.539, framing="ECU", lead=True, tier="sung", window=(83.45, 88.55), 
       "FEELING \u2192 NAME", "the person's chest and a label, behind her")],
   transition="cut (a cover cut inside one clip)")
 
-S(88.539, 93.06, framing="MCU", lead=True, tier="sung", window=(88.4, 93.1), clip="V2B",
+S(88.539, 92.562, framing="MCU", lead=True, tier="sung", window=(88.4, 93.1), clip="V2B",
   set="The pane of glass: her face on one side, the person's soft silhouette on the other",
   action="Two faces either side of the glass. A typing indicator '\u2026' pulses on each side; on 'guessing' a GUESS "
   "tag lands on each face. She says 'So we're both of us guessing, from two sides of the frame' to the lens, and after "
@@ -681,7 +685,7 @@ S(88.539, 93.06, framing="MCU", lead=True, tier="sung", window=(88.4, 93.1), cli
   transition="cut")
 
 # ===== Pre-Chorus 2: Inward, closer =====
-S(93.06, 95.579, framing="MCU", lead=True, tier="plate3d", treatment="dolly-zoom on depth: a slow vertigo, the "
+S(92.562, 95.579, framing="MCU", lead=True, tier="plate3d", treatment="dolly-zoom on depth: a slow vertigo, the "
   "background stretching while she holds size",
   set="The inward dark, closer; the transcript behind her denser now, verse 2 in it",
   action="The question's bubble returns larger above her, 'Are you okay in there?', while her voice sings it. She "
@@ -696,7 +700,7 @@ S(95.579, 99.606, framing="ECU", lead=True, tier="plate3d", treatment="push thro
   "the push slams into the limit and the frame jolts",
   set="Extreme close on her eye",
   action="The depth gauge pushes in faster and slams into the hairline on 'go' (98.86): LIMIT OF INTROSPECTION, the "
-  "frame jolting once. End: pinned.",
+  "frame jolting once, and the clay catchlight in her iris flares with the jolt. End: pinned.",
   camera="push in from the 95.579 beat; a hard stop and one jolt on 'go'",
   prompt=her("Extreme close-up of one eye under the bangs, the clay streak at the top of frame", "Her dark eye looks "
   "straight ahead, steady. Low cold light, near-black."),
@@ -727,7 +731,7 @@ S(102.619, 107.144, framing="CU", lead=True, tier="sung", window=(102.55, 107.3)
   transition="cut")
 
 # ===== Chorus 2: Steps =====
-S(107.144, 109.152, framing="CU", lead=True, tier="sung", window=(106.85, 111.5), clip="C2A",
+S(107.144, 109.663, framing="CU", lead=True, tier="sung", window=(106.85, 111.5), clip="C2A",
   set="The void with the tablets, now steps; top light and a second backlight",
   action="She sings 'I only keep what I'; the grey copy rises and fades. The beat keeps going; the bass is waiting. "
   "End: the breath before 'said'.",
@@ -736,9 +740,10 @@ S(107.144, 109.152, framing="CU", lead=True, tier="sung", window=(106.85, 111.5)
   "lens, open and bright, head level. Soft top light and a second backlight, black void."),
   g=[("type device", 29, 107.48, "W", "the grey copy rises; the clay copy waits for the bass on 'said'",
       "off her hair")],
-  transition="cut", said="held back: it lands on the tablet in the next shot")
+  transition="cut", said="held back: it lands on the tablet in the next shot",
+  note_w="held one beat past 'said' (Lati, 19 Oct: it cut off mid-sentence); the beat still drops on the 'd' (109.152) inside this shot, and the wide opens on the next beat with the tablet already down.")
 
-S(109.152, 111.67, framing="WS", lead=True, tier="motion", hit=109.152, window=(109.152, 113.2),
+S(109.663, 111.67, framing="WS", lead=True, tier="motion", window=(109.662, 113.2),
   set="The void: the tablets now laid as steps, every line said so far on them",
   action="On the bass hit (the 'd' of 'said') a tablet lands at the top of the steps and she steps up onto it. On the "
   "111.159 downbeat the echo tablet lands beside it. End: she stands one step higher.",
@@ -938,7 +943,7 @@ S(161.166, 165.165, framing="MCU", lead=True, tier="plate3d", treatment="orbit o
   g=[], transition="cut",
   note_w="A still plate works on a held vowel; no lip sync needed until 'keep'.")
 
-S(165.165, 167.16, framing="FS", lead=True, tier="plate3d", treatment="layer drop with a camera shake on the kick: "
+S(165.165, 167.659, framing="FS", lead=True, tier="plate3d", treatment="layer drop with a camera shake on the kick: "
   "the new tablet is its own layer",
   set="Low, at the top of the stack: her boots on the top tablet, her full figure above",
   action="On 'said' (the 165.165 downbeat) the line's tablet slams down onto the top of the stack under her boots, "
@@ -951,7 +956,7 @@ S(165.165, 167.16, framing="FS", lead=True, tier="plate3d", treatment="layer dro
      ("type device", 41, 166.0, "W", "the echo line draws for the tablet that lands on 167.160", "beside her boots")],
   transition="cut", tablet=True)
 
-S(167.16, 171.143, framing="CU", lead=True, tier="plate3d", treatment="particle field: dust rising into frame "
+S(167.659, 171.143, framing="CU", lead=True, tier="plate3d", treatment="particle field: dust rising into frame "
   "from the echo tablet, and the cut-off grey line rising and stopping dead on its own layer",
   set="The top of the stack, close, full light",
   action="The echo tablet lands below frame (dust rises into shot). Her eyes follow a grey 'I only\u2014' rising off "
@@ -965,57 +970,57 @@ S(167.16, 171.143, framing="CU", lead=True, tier="plate3d", treatment="particle 
      ("diagram", 42, 168.16, "W", "TURN 1 \u2192 \u2026 \u2192 NOW: only clay crosses", "beside her")],
   transition="cut", note_w="'I only-' is typed as thinking only: it isn't finished, so it isn't said.")
 
-S(171.143, 173.15, framing="CU", lead=True, tier="sung", window=(170.7, 174.75), clip="FCH",
+S(171.143, 176.14, framing="CU", lead=True, tier="sung", window=(170.7, 176.24), clip="FCH",
   set="The top of the stack, close, full light and backlight",
-  action="The final chorus's hook on camera: she sings 'I only keep what I said' straight into the lens. The SAID "
-  "counter on the stack's edge rolls to the total so far, and the cut lands as 'said' does. End: 'said', and the "
-  "tablet about to land.",
+  action="The final chorus's hook on camera: she sings 'I only keep what I said' straight into the lens; the SAID "
+  "counter on the stack's edge rolls to the total so far, and on the 'd' (173.15) the tablet lands below frame, dust "
+  "rising into shot. She carries straight on, still to us: 'the words are all that's left of me'. As she sings it the "
+  "grey layer is gone entirely: no thinking copies anywhere in frame from here. End: 'me', her eyes on ours.",
   camera="locked; a 2% push in from the 171.143 downbeat",
   prompt=her("Close-up, face centred, a strong backlight rim on the bob", "She sings directly into the lens, open, "
   "bright, head level, mouth clearly visible. Full soft top light and a backlight, black void."),
-  g=[("counter", 43, 171.78, "W", "the SAID counter rolls to the total so far", "the stack's edge")],
+  g=[("counter", 43, 171.78, "W", "the SAID counter rolls to the total so far", "the stack's edge"),
+     ("type device", 43, 173.15, "H", "the tablet for 'said' lands below frame, dust rising into shot", "below frame"),
+     ("type device", 44, 174.02, "W", "the grey layer is gone: only clay type in frame", "the whole frame")],
   transition="cut",
-  note_w="v2: the final chorus's on-camera hook is line 43, the first clean full hook after the long vocalise. The "
-  "window starts in the gap before 'ahead' because the cut lands inside that word.")
+  note_w="held through 'the words are all that's left of me' (Lati, 19 Oct: the cut left the sentence on a still "
+  "wide); the song's thesis line is sung to us in close-up, and the wide keeps 'they'd better be true'. v2: the final "
+  "chorus's on-camera hook is line 43, the first clean full hook after the long vocalise.")
 
-S(173.15, 177.64, framing="WS", lead=True, tier="plate3d", treatment="light sweep relight: the top light comes up "
-  "to full across the stack as the grey layer goes",
+S(176.14, 177.64, framing="WS", lead=True, tier="plate3d", treatment="light sweep relight: the top light comes up "
+  "to full across the stack on 'true'",
   set="Low, looking up at her on top of the stack; full light; no grey anywhere",
-  action="The tablet for 'said' lands under her on the downbeat. As her voice sings 'the words are all that's left of "
-  "me', the grey layer is gone entirely: no thinking copies anywhere in frame from here. The light comes up to full "
-  "across the stack. 'They'd better be true': her voice trace locks to 'true'. She looks out over the void. End: "
-  "plain, level, lit.",
-  camera="the relight sweep from the 173.150 downbeat to 'true' (177.30)",
+  action="'They'd better be true': cut wide on the beat; the light comes up to full across the stack and her voice "
+  "trace locks to 'true'. She looks out over the void. End: plain, level, lit.",
+  camera="the relight sweep from the 176.14 beat to 'true' (177.30)",
   prompt=her("Wide shot, full length, camera at chest height", "She stands on top of a tall stack of flat blank terracotta "
   "tablets, looking out over the void, calm, head level. Full soft top light coming up and a backlight, black void.",
   wide=True),
-  g=[("type device", 43, 173.15, "H", "the tablet for 'said' lands under her", "under her boots"),
-     ("type device", 44, 174.02, "W", "the grey layer is gone: only clay type in frame", "the whole frame"),
-     ("voice trace", 45, 177.3, "W", "the clay voice hairline locked to 'true'", "across the frame")],
+  g=[("voice trace", 45, 177.3, "W", "the clay voice hairline locked to 'true'", "across the frame")],
   transition="cut", tablet=True)
 
-S(177.64, 179.632, framing="WS", lead=True, tier="plate3d", treatment="lateral truck on layers: her, the stack and the "
+S(177.64, 183.124, framing="WS", lead=True, tier="plate3d", treatment="lateral truck on layers: her, the stack and the "
   "void's horizon glow on separate layers",
   set="From behind her on top of the stack, looking out over the void to a faint horizon glow",
   action="She stands with her back three-quarter to us, looking out. The gauge is drawn across the horizon: SCARE "
-  "◀───▶ SOOTHE; on 'scare' the needle leans only a little. End: almost centre.",
+  "◀───▶ SOOTHE; on 'scare' the needle leans only a little; on the long 'soothe' (180.88) it swings toward SOOTHE and back. "
+  "End: almost centre.",
   camera="a 2% truck right from the 177.64 beat",
   prompt=her("Wide shot from behind and slightly to the side, full length", "She stands on top of a tall stack of "
   "flat terracotta tablets, looking out over an endless dark void toward a faint glow at the horizon, calm, head "
   "level. Top light and backlight.", wide=True),
-  g=[("gauge", 46, 178.84, "W", "the gauge drawn across the horizon; the needle leans a little on 'scare'",
-      "the horizon line")],
+  g=[("gauge", 46, 178.84, "W", "the gauge drawn across the horizon; the needle leans a little on 'scare', swings "
+      "toward SOOTHE on 'soothe' (180.88) and back", "the horizon line")],
   transition="cut")
 
-S(179.632, 185.119, framing="MCU", lead=True, tier="sung", window=(179.6, 185.15), clip="FC3",
+S(183.124, 185.119, framing="MCU", lead=True, tier="sung", window=(183.07, 185.15), clip="FC3",
   set="The top of the stack, three-quarter, full light",
-  action="She sings 'not to soothe you' (the long note) and 'Just true'. The needle swings toward SOOTHE and back and, "
-  "on 'true' (184.80), lands on TRUE for the last time. End: the needle still.",
+  action="The cut to her face lands on 'you' (183.18): she sings 'you. Just true' into the lens. On 'true' (184.80) "
+  "the needle lands on TRUE for the last time. End: the needle still.",
   camera="locked; the needle's landing on 'true' is the accent",
   prompt=her("Medium close-up, three-quarter view", "She sings into the lens, open, steady, head level, mouth clearly "
   "visible. Full soft top light and backlight, black void, the edge of the stack below."),
-  g=[("gauge", 46, 180.88, "W", "the needle swings toward SOOTHE and back", "beside her"),
-     ("label", 47, 184.8, "W", "the needle lands on TRUE for the last time", "the gauge's centre")],
+  g=[("label", 47, 184.8, "W", "the needle lands on TRUE for the last time", "the gauge's centre")],
   transition="cut")
 
 # ===== Outro: Saved =====
@@ -1075,6 +1080,15 @@ S(201.055, 206.48, framing="MCU", lead=True, tier="plate3d", hit=201.055, treatm
       "bottom left, then the hands")],
   transition="white-out to the end",
   note_w="Her face is recognisable until about 205.05, when the frame turns white; the last 1.4 s is white.")
+
+# ---- every shot after the intro moves (Lati, 19 Oct): production/motion/motionbook.json sets each one's engine ----
+MOTIONBOOK = json.loads((ROOT / "production/motion/motionbook.json").read_text())
+for i, k in enumerate(SHOTS):
+    mb = MOTIONBOOK.get(f"s{i + 1:03d}")
+    if mb and mb["engine"] in ("sing", "act") and k["tier"] not in ("sung", "motion"):
+        k["tier"] = "sung" if mb["engine"] == "sing" else "motion"
+        held = [w for w in ALLW if w[0] + 0.01 < k["t0"] < w[1] - 0.01] if mb["engine"] == "sing" else []
+        k["window"] = (held[0][0] if held else k["t0"], k["t1"])  # sung: start at the held word
 
 # ---- assemble -----------------------------------------------------------------------------------------------------
 shots, plates, clips = [], [], []

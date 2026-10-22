@@ -23,7 +23,8 @@ OUT = ROOT / "media/plates/picked"
 def find(plate, seed):
     n = plate.split("-", 1)[1]
     for pre in (f"q-{n}", f"pf-{n}", f"p-{n}"):
-        hits = sorted(glob.glob(str(ROOT / f"media/plates/{pre}_*_s{seed}_*.png")))
+        hits = sorted(glob.glob(str(ROOT / f"media/plates/{pre}_*_s{seed}_*.png")) +
+                      glob.glob(str(ROOT / f"media/plates/{pre}_s{seed}_*.png")))  # inserts render without a LoRA
         if hits:
             return str(Path(hits[-1]).relative_to(ROOT))
     raise SystemExit(f"no render for {plate} seed {seed}")
