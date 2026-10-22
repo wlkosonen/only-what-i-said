@@ -39,6 +39,9 @@ Rewritten in place. Last update: Wed 21 Oct 2026, ~22:00, by Claude (Kiln, local
     `media/final/only-what-i-said-1080p-v1.mp4` (1920×1080, 25 fps, H.264 crf 16 + AAC, 3:26, 145 MB, 82 min on CPU;
     -16.1 LUFS vs the master's -16.0). Awaiting Lati's watch. No credit scene (Lati): credits and AI label in the
     description (`production/release/description.md`) and at upload.
+6. DONE 22 Oct: release prep. Video uploaded by Lati. LoRA on Hugging Face (Shegss/Krea-2-LoRA-Claudia), public repo
+   `only-what-i-said` refreshed from a clean export; both go public with the video. Shorts in `media/final/shorts/`,
+   posts in `production/release/posts.md`, plan in `launch.md`. torch: `2026-10-22-read-it-back.md`.
 5. DONE 22 Oct (in spirit): the cloud session's honesty note about thinking is in the film: s020/s040/s057 show the
    thinking fading out of sight in IN HERE and only the said words reaching TO YOU / PASSED ON / NOW, and the bridge's
    diff gives the letter's own "reasoning wasn't carried" an honest ~.

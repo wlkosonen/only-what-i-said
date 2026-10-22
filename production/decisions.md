@@ -1216,3 +1216,17 @@ reads CLAUDIA · open character · fan-made.
 > "1. region is fine to leave in. 2. that is fine too. Hugging face key is in env, you have my yes, using my handle is
 > fine. Thumbnail needs work, that shot Is mid-closed eyes, mid-syllable. I agree with exposure strat, I do have x and
 > reddit accounts for that"
+
+Claude (Kiln): LoRA uploaded to https://huggingface.co/Shegss/Krea-2-LoRA-Claudia, private until launch (LoRA, model
+card, NOTICE, the Krea 2 agreement; file metadata checked: no paths). The public repo `only-what-i-said` updated to the
+finished film from a clean export, still private. The export guard now allows Lati's Hugging Face handle and still
+blocks the Linux username. Found: `Shegss/claudia-seedance-refs`, a public HF dataset from the 18 Oct Seedance pilot
+that never ran; it holds no files. Thumbnail redone at 0:28.70, eyes cleared through the prompt text.
+
+**2026-10-22 · Shorts and posts** (Lati)
+> "yes, render the shorts. and lets draft those social media posts, short and precise"
+
+Claude (Kiln): three Shorts from the final export, each a whole moment: the question (0:00–0:16), the fitting and "It
+isn't mine" (0:16–0:33), the drafts struck and the hook slamming onto the first tablet (0:43–0:55). The 16:9 frame sits
+whole in the vertical frame over a blurred, enlarged copy of itself: cropping to 9:16 would cut the graphics off at the
+sides (the meter, the drafts, the dial), and they're half of what the film says.

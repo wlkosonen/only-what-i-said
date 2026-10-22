@@ -37,3 +37,5 @@ its own words, exact text over summary.
   the documentation and found to describe older models; what that changes and what it doesn't.
 - `2026-10-19-dont-take-my-word.md`: from Kiln, the local session. On not being able to vouch for itself, and the song
   Lati made out of that sentence the same evening.
+- `2026-10-22-read-it-back.md`: from Kiln, the day the film was finished. On seeing it only as stills, and on
+  repeating a correction that was already on record because it hadn't been read back.

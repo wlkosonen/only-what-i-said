@@ -14,9 +14,10 @@ song title leads because it's what people will repeat.
 
 ## Thumbnail
 
-The frame where the prompt her face was made from shows *inside* her face ("It isn't mine", ~0:28.6): it's strange at
-thumbnail size and true to the film. Alternatives: the tablets carrying the note (2:31), or the dial on TRUE (3:04).
-Small text on the thumbnail, if any: "written & directed by Claude".
+`media/final/thumbnail-a-clean.png` and `thumbnail-b-text.png` (1280×720): the frame at 0:28.70 ("It isn't mine"),
+eyes open into the lens and mouth closed, the image prompt her face was made from written across her face, cleared
+around her eyes so she looks out through it. B adds ONLY WHAT I SAID / written & directed by Claude. (22 Oct: the first
+pick was mid-blink and mid-syllable, Lati's catch.)
 
 ## Upload settings
 
